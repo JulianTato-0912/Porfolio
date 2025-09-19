@@ -1,0 +1,100 @@
+/* ====== Estilos generales ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ====== Encabezado ====== */
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ====== Menú de navegación ====== */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #444;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background: #666;
+  border-radius: 5px;
+}
+
+/* ====== Secciones ====== */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ====== Foto de presentación ====== */
+.foto {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.foto img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #333;
+}
+
+/* ====== Proyectos ====== */
+.proyecto {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+/* ====== Formulario de contacto ====== */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}

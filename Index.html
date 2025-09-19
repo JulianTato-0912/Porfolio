@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Julián Tato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: #444;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: yellow;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+    nav ul li a:hover {
+      background: #666;
+      border-radius: 5px;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .foto {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .foto img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #333;
+    }
+    .proyecto {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    form button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú -->
+  <header>
+    <h1>Mi Portfolio</h1>
+    <p>Estudiante de Programación - UTN</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#presentacion">Inicio</a></li>
+      <li><a href="#info">Sobre mí</a></li>
+      <li><a href="#conocimientos">Conocimientos</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#redes">Redes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Presentación inicial -->
+  <section id="presentacion">
+    <div class="foto">
+      <img src="tu-foto.jpg" alt="Foto de Julián">
+    </div>
+    <h2>¡Hola! Soy Julián Tato</h2>
+    <p>Estudiante de Programación en la UTN. Me interesa la programación en C++, la gestión de proyectos y la tecnología aplicada a la logística.</p>
+  </section>
+
+  <!-- Información general -->
+  <section id="info">
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante universitario, con interés en programación, auditoría y logística. Mi objetivo es aplicar mis conocimientos en proyectos reales y seguir desarrollándome en el área tecnológica.</p>
+  </section>
+
+  <!-- Conocimientos -->
+  <section id="conocimientos">
+    <h2>Conocimientos</h2>
+    <ul>
+      <li>C++</li>
+      <li>C#</li>
+      <li>SQL</li>
+      <li>Excel avanzado</li>
+      <li>HTML5 & CSS</li>
+    </ul>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="proyecto">
+      <h3>Sistema de gestión para pizzería</h3>
+      <p>Programa en C++ para manejar pedidos, clientes y productos. Los datos se almacenan en archivos.</p>
+    </div>
+    <div class="proyecto">
+      <h3>Planilla de control logístico</h3>
+      <p>Uso de Excel avanzado para gestionar pedidos y stock de productos.</p>
+    </div>
+  </section>
+
+  <!-- Redes -->
+  <section id="redes">
+    <h2>Mis redes</h2>
+    <ul>
+      <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com" target="_blank">GitHub</a></li>
+      <li>Email: tuemail@example.com</li>
+    </ul>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Formulario de contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Escribe tu mensaje..." rows="5"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 - Portfolio de Julián Tato</p>
+  </footer>
+
+</body>
+</html>
