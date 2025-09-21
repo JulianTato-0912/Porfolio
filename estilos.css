@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ====== Estilos generales ====== */
 body {
   font-family: Arial, sans-serif;
@@ -98,3 +99,422 @@ footer {
   padding: 15px;
   margin-top: 20px;
 }
+=======
+/* ====== Estilos generales ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  /*background: linear-gradient(270deg, #1e3a8a, #3b82f6, #6b7280);*/
+  /*background: linear-gradient(270deg, #333333, #888888, #dddddd);*/
+  background: linear-gradient(270deg, #ffffff, #aaaaaa, #000000);
+  background-size: 600% 600%;
+  animation: gradientAnim 15s ease infinite;
+  
+ /* background: linear-gradient(to bottom, #1e3a8a, #3b82f6);*/
+ /*background-color: #d0cfc942;*/
+ 
+}
+@keyframes gradientAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ====== Encabezado ====== */
+header {
+  position: relative;
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;             /* activa flexbox */
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  gap: 20px;                 /* espacio entre imagen y texto */
+  flex-wrap: wrap;  
+
+
+  /* Imagen de fondo */
+
+background-image: url("foto-fondo-header.jpg"); /* tu imagen de fondo */
+background-size: cover;             /* que la imagen cubra todo el header */
+background-position: center;        /* centra la imagen */
+background-repeat: no-repeat;       /* evita que se repita */
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* negro semitransparente */
+  z-index: 0;
+}
+
+header .perfil {
+   position: relative;
+  z-index: 1; /* asegura que la foto y texto queden encima del overlay */
+}
+
+/* FOTO DE PRESENTACION CON NOMBRE  */
+
+#presentacion {
+  padding: 30px 500px;
+  background-color: #f4f4f4;
+}
+
+.perfil {
+  display: flex;            /* alinea foto y texto en fila */
+  align-items: center;      /* centra verticalmente */
+  gap: 100px;                /* espacio entre foto y texto */
+ 
+}
+
+.foto-perfil {
+  width: 300px;             /* tamaño de la foto */
+  height: 300px;
+  border-radius: 50%;       /* foto circular */
+  object-fit: cover;        /* que la foto no se deforme */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3); /* sombra opcional */
+}
+
+.info-perfil h1 {
+  margin: 0;
+  font-size: 38px;
+  color: whitesmoke;
+}
+
+.info-perfil p {
+  margin: 5px 0 0 0;
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+/* ------------------------ REDES --------------------------*/
+
+#redes {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e0e7ff); /* fondo degradado suave */
+  border-radius: 10px;
+  margin: 40px auto; /* espacio con otras secciones */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+  transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
+  min-height: 50px;
+}
+#redes:hover {
+  transform: translateY(-5px); /* sube la sección 5px */
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3); /* sombra más grande */
+}
+
+#redes h2 {
+  font-size: 32px;
+   margin: 0 0 30px 0;
+  color: #1e3a8a;
+  position: relative;
+  display: inline-block;
+}
+
+#redes h2::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+#redes h2:hover {
+  color: #3b82f6;
+}
+
+#redes h2:hover::after {
+  width: 100%;
+}
+
+.redes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* responsive */
+}
+
+.redes-container a {
+  font-size: 40px;
+  color: #1e3a8a;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.redes-container a:hover {
+  color: #3b82f6;
+  transform: scale(1.2);
+}
+
+
+/* ====== Menú de navegación ====== */
+nav ul {
+  list-style: none;
+  margin: 0 auto;   
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #1e3a8a;
+
+  width: 800px;             /* ancho fijo opcional */
+  max-width: 90%;           /* se adapta a pantallas pequeñas */
+  border-radius: 10px;      /* bordes redondeados opcional */
+  overflow: hidden;         /* evita que algo sobresalga */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: whitesmoke;
+  font-family: 'Roboto', sans-serif; /* fuente más moderna */
+  font-weight: 500;                  /* grosor del texto */
+  font-size: 16px;                   /* tamaño del texto */
+  letter-spacing: 1px; 
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  background-color: #1e3a8a;
+  
+  border: 1px solid transparent; /* borde invisible por defecto */
+  border-radius: 8px;             /* bordes redondeados */
+ 
+}
+
+nav ul li a:hover {
+  background: #666666;
+  border-radius: 5px;
+}
+
+/* ====== Secciones ====== */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+
+/* ------------------------------------------------------------SECCION SOBRE MI -------------------------------------------- */
+#info {
+  /*background: linear-gradient(to bottom, #3b82f6, #1e3a8a);    color de fondo */
+  background: linear-gradient(to bottom, #cccccc, #f7f7f7, #ffffff);
+  color: #333; 
+  padding: 60px 20px;           /* espacio interno */
+  text-align: center;           /* centra texto e imagen */
+  border-radius: 10px;          /* bordes redondeados */
+  max-width: 1150px;             /* ancho máximo de la sección */
+  height: 500px;
+  margin: 40px auto;            /* centra la sección horizontalmente */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+  transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
+
+  /* FONDO */
+
+  background-image: url("https://wallpapers.com/images/high/white-sheet-crumpled-paper-him47qav3ltuzqx7.webp"); /* tu imagen de fondo */
+  background-size: cover;             /* que la imagen cubra todo el header */
+  background-position: center;        /* centra la imagen */
+  background-repeat: no-repeat;       /* evita que se repita */
+} 
+#info:hover {
+  transform: translateY(-5px); /* sube la sección 5px */
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3); /* sombra más grande */
+}
+
+#info h2 {
+  color: black;               /* color del título */
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+#info h2:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #3b82f6; /* azul llamativo */
+  transition: width 0.3s ease;
+}
+#info h2:hover {
+  color: #3b82f6;
+}
+#info h2:hover::after {
+  width: 100%;
+}
+#info h2 i {
+  margin-right: 10px; /* separa el icono del texto */
+  color: #3b82f6;     /* color del icono */
+}
+
+#info p {
+  max-width: 700px;       /* ancho máximo del párrafo */
+  margin: 0 auto;          /* centra el párrafo horizontalmente */
+  text-align: justify;     /* justifica el texto */
+  line-height: 1.6;        /* mejora la legibilidad */
+  font-size: 20px;         /* tamaño de letra cómodo */
+  color: #333;             /* color de texto */
+}
+.resaltado {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+/* ------------------------------------------------------------SECCION CONOCIMIENTOS -------------------------------------------- */
+#conocimientos {
+  /*background: linear-gradient(to bottom, #3b82f6, #1e3a8a);    color de fondo */
+  background: linear-gradient(to bottom, #cccccc, #f7f7f7, #ffffff);
+  color: #333; 
+  padding: 60px 20px;           /* espacio interno */
+  text-align: center;           /* centra texto e imagen */
+  border-radius: 10px;          /* bordes redondeados */
+  max-width: 1000px;             /* ancho máximo de la sección */
+  margin: 40px auto;            /* centra la sección horizontalmente */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+  transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
+
+  background-image: url("https://wallpapers.com/images/high/white-sheet-crumpled-paper-him47qav3ltuzqx7.webp"); /* tu imagen de fondo */
+  background-size: cover;             /* que la imagen cubra todo el header */
+  background-position: center;        /* centra la imagen */
+  background-repeat: no-repeat;       /* evita que se repita */
+} 
+#conocimientos:hover {
+  transform: translateY(-5px); /* sube la sección 5px */
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3); /* sombra más grande */
+}
+#conocimientos ul {
+  list-style: none;       /* quita las viñetas */
+  padding: 0;
+  margin: 0;
+  
+  display: flex;          /* pone los elementos en fila */
+  justify-content: center; /* centra la fila en la sección */
+  gap: 30px;              /* espacio entre cada li */
+  flex-wrap: wrap;        /* permite que se acomoden en varias líneas en pantallas pequeñas */
+}
+#conocimientos li {
+  display: flex;          /* para alinear icono y texto */
+  align-items: center;    /* centra verticalmente el contenido */
+  gap: 10px;              /* espacio entre icono y texto */
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#conocimientos li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+.icono-csharp {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+#conocimientos h2 {
+  color: black;               /* color del título */
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+#conocimientos h2:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #3b82f6; /* azul llamativo */
+  transition: width 0.3s ease;
+}
+#conocimientos h2:hover {
+  color: #3b82f6;
+}
+#conocimientos h2:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== Proyectos ====== */
+.proyecto {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+/* ====== Formulario de contacto ====== */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+
+>>>>>>> efed367 (Portfolio casi final)
