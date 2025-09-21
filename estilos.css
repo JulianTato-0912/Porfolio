@@ -164,9 +164,8 @@ nav ul {
   justify-content: center;
   background: #1e3a8a;
 
-  width: 800px;             /* ancho fijo opcional */
-  max-width: 90%;           /* se adapta a pantallas pequeñas */
-  border-radius: 10px;      /* bordes redondeados opcional */
+  width: 5000px;             /* ancho fijo opcional */
+  max-width: 100%;           /* se adapta a pantallas pequeñas */
   overflow: hidden;         /* evita que algo sobresalga */
 }
 
@@ -291,10 +290,10 @@ section {
   box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* sombra suave */
   transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
 
-  background-image: url("https://wallpapers.com/images/high/white-sheet-crumpled-paper-him47qav3ltuzqx7.webp"); /* tu imagen de fondo */
-  background-size: cover;             /* que la imagen cubra todo el header */
-  background-position: center;        /* centra la imagen */
-  background-repeat: no-repeat;       /* evita que se repita */
+  /*background-image: url("https://wallpapers.com/images/high/white-sheet-crumpled-paper-him47qav3ltuzqx7.webp"); /* tu imagen de fondo */
+  /*background-size: cover;             /* que la imagen cubra todo el header */
+  /*background-position: center;        /* centra la imagen */
+  /*background-repeat: no-repeat;       /* evita que se repita */
 } 
 #conocimientos:hover {
   transform: translateY(-5px); /* sube la sección 5px */
@@ -362,27 +361,147 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* ====== Proyectos ====== */
-.proyecto {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  background: #f9f9f9;
+/* =============================================================== SECCION PROYECTOS ========================================================== */
+/* Contenedor de proyectos */
+.proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* ====== Formulario de contacto ====== */
+#proyectos {
+  text-align: center; 
+}
+
+/* Tarjeta individual */
+.proyecto-card {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Imagen del proyecto */
+.proyecto-img {
+   width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título y descripción */
+.proyecto-card h3 {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.proyecto-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* Botón de acción */
+.ver-proyecto {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 6px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.ver-proyecto:hover {
+  background-color: #005f86;
+}
+
+.proyecto-link {
+  display: block;       /* ocupa todo el bloque */
+  text-align: center;   /* centra imagen y texto */
+  color: inherit;       /* mantiene colores originales */
+  text-decoration: none;
+}
+
+.proyecto-link:hover h3 {
+  color: #0077b6;       /* Cambio de color en hover */
+}
+
+.proyecto-link img {
+  width: 30px;          /* Tamaño controlado del icono */
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+#proyectos h2 {
+  color: black;               /* color del título */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+#proyectos h2:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #3b82f6; /* azul llamativo */
+  transition: width 0.3s ease;
+}
+#proyectos h2:hover {
+  color: #3b82f6;
+}
+#proyectos h2:hover::after {
+  width: 100%;
+}
+
+.titulo-proyectos {
+  display: inline-block;         /* se ajusta al ancho del título */
+  background-color: white;    /* color del recuadro*/
+  padding: 10px 20px;            /* espacio alrededor del texto */
+  border-radius: 12px;           /* bordes redondeados */
+  text-align: center;            /* centra el texto */
+  margin-bottom: 30px;           /* espacio con las tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+  width: 300px;
+}
+
+.titulo-proyectos h2 {
+  margin: 0;                     /* quito el margen default del h2 */
+  color: #000;                    /* color del texto */
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+}
+.titulo-proyectos:hover {
+  transform: translateY(-5px);          /* se eleva ligeramente */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* sombra más pronunciada */
+}
+
+
+/* ============================================================== Formulario de contacto =====================================================0===== */
 form input, form textarea {
   width: 100%;
   padding: 10px;
